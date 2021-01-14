@@ -39,15 +39,17 @@ export default function User() {
 
   return (
     <div className="user-root inner-wrapper">
-      {console.log(state)}
       <h3>User Name: {id}</h3>
       <div className="input-wrapper">
         {userInputs.map((input) => (
-          <Stuff Component={inputs[input]} onChange={dispatch} />
+          <Comnponents Component={inputs[input]} onChange={dispatch} />
         ))}
       </div>
+      {console.log("State outputs to console on input", state)}
     </div>
   );
 }
 
-const Stuff = ({ Component, onChange }) => <Component onChange={onChange} />;
+const Comnponents = ({ Component, onChange }) => (
+  <Component onChange={onChange} />
+);
