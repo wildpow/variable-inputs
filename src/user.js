@@ -1,3 +1,4 @@
+import { useReducer } from "react";
 import { useParams } from "react-router-dom";
 import userData from "./userData";
 import {
@@ -12,7 +13,15 @@ import {
   Message,
   Email,
 } from "./inputs";
+import "./user.css";
+
+const reducer = (state, action) => {
+  return { ...state, [action.type]: action.payload };
+};
+const initialState = {};
 export default function User() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   let { id } = useParams();
   const inputs = [
     FirstName,
@@ -29,16 +38,16 @@ export default function User() {
   const userInputs = userData[id];
 
   return (
-    <div>
-      {console.log(inputs[0])}
-      <h3>UserName: {id}</h3>
-      <div>
+    <div className="user-root inner-wrapper">
+      {console.log(state)}
+      <h3>User Name: {id}</h3>
+      <div className="input-wrapper">
         {userInputs.map((input) => (
-          <Stuff Component={inputs[input]} />
+          <Stuff Component={inputs[input]} onChange={dispatch} />
         ))}
       </div>
     </div>
   );
 }
 
-const Stuff = ({ Component }) => <Component />;
+const Stuff = ({ Component, onChange }) => <Component onChange={onChange} />;

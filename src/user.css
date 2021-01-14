@@ -1,0 +1,10 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.user-root h3 {
+  text-align: center;
+}

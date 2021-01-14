@@ -31,4 +31,20 @@ nav a {
   width: 100%;
   justify-content: space-evenly;
   list-style: none;
+  border: 1px solid lightgray;
+  padding: 20px 0;
+}
+.user-choice ul li {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+.user-choice ul li a {
+  border: 1px solid lightseagreen;
+  width: 100%;
+  padding: 20px 20px;
+  text-align: center;
+}
+label {
+  padding: 20px 0;
 }
