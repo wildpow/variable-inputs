@@ -1,0 +1,34 @@
+header {
+  background-color: lightgray;
+}
+.inner-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.header-content h1 {
+  margin: 0;
+}
+
+nav a {
+  font-size: 2rem;
+}
+.user-choice {
+  display: flex;
+
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.user-choice ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  list-style: none;
+}
